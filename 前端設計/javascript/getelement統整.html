@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+
+<body style="text-align: center; ;">
+
+    <button onclick="message()">測試1</button>
+    <!-- 直接將功能寫入HTML裡，並寫上觸發方式 -->
+    <button id="btn2">測試2</button>
+    <!-- 先抓到物件，在使用監聽事件是否觸發 -->
+    <button id="btn3">測試3</button>
+    <!-- 方法同上，只是將function簡寫為 ()=> 括號等於大於合起來就是function() -->
+    <button id="btn4">測試4</button>
+    <!-- 將所有的重複語法定義為常數進行簡寫 -->
+    <button id="btn5">測試5</button>
+
+    <hr>
+    <span id="disnut"></span>
+
+    <hr>
+    <!-- 改變網頁顏色寫法應用 -->
+    <h2>測試</h2>
+    <select name="" id="color" >
+        <option value="transparent">無色</option>
+        <option value="blue">藍色</option>
+        <option value="red">紅色</option>
+        <option value="green">綠色</option>
+        <option value="yellow">黃色</option>
+    </select>
+
+    <script>
+        //第一種方法 functions分配法
+        function message() {
+            document.getElementById("disnut").innerHTML = "第1種方法";
+        }
+
+        //第二種寫法 物件分配法
+        document.getElementById("btn2").addEventListener("click", function () {
+            document.getElementById("disnut").innerHTML = "第2種方法";
+        });
+        //第三種寫法 物件分配法-簡寫方式
+
+        document.getElementById("btn3").addEventListener("click", () => {
+            document.getElementById("disnut").innerHTML = "第3種方法";
+        });
+        //第四種寫法 物件分配法-更簡寫
+
+        document.getElementById("btn4").onclick = () => {
+            document.getElementById("disnut").innerHTML = "第4種方法";
+        };
+
+        //第五種寫法 使用變數進行簡寫 
+        const btn5 = document.getElementById("btn5");
+        const disnut = document.getElementById("disnut");
+        //以上是JS內，預設為相同名稱為常數，可以不用再打一次
+        function easy() {
+            disnut.innerHTML = "第5種方法";
+        }
+        btn5.addEventListener("click", easy)
+        //更改背景顏色應用
+        const color =  document.getElementById("color");
+        color.addEventListener("change",function change() {
+            document.body.style.backgroundColor = color.value;
+        })
+
+    </script>
+
+
+</body>
+
+</html>

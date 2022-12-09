@@ -1,0 +1,46 @@
+觸發事件發生原理
+
+    document.getElementById("btn2")
+    先抓到該物件
+
+    addEventListener("click"
+    監聽事件的觸發方式
+
+    ,function(){           });
+    執行函式來執行想要的功能
+
+    document.getElementById("disnut")  
+    所執行功能的發生位置
+
+    innerHTML="第2種方法";
+    所發生的事情
+
+        document.getElementById("btn2").addEventListener("click",function(){
+            document.getElementById("disnut").innerHTML="第2種方法";
+        });
+        
+計時 setTimeout寫法
+ setTimeout(() => {
+          console.log("delay 1 second.");
+          document.getElementById("btn").innerText = "時間到!!!";
+        }, 1000);
+如未執行 setTimeout 可以用 clearTimeout來停止執行
+      function cancel() {
+        console.log("cancel");
+        clearTimeout("想停止的函式");
+      }
+
+與getelement一樣的抓物件寫法
+記得要加上 # ID . class
+  // 選取單一元素
+    document.querySelector("#id .class span");
+
+  // 選取多個元素
+    document.querySelectorAll(".class");
+
+快速判斷抓物件語法
+    if(document.getElementById("test") == null) {
+      console.log("不存在");
+    } else {
+      console.log("存在");
+    }

@@ -1,0 +1,72 @@
+[type] {
+    background-color: rgb(255, 0, 0);
+}
+
+h2:hover {
+    background-color: rgb(47, 0, 255);
+    /*滑鼠滑過變顏色*/
+
+}
+
+.滑鼠註解 {
+    position: relative;
+    padding: 50px 0px 50px;
+    top: 20px;
+    font-size: 50px;
+    width: 250px;
+}
+
+.滑鼠註解:hover::after {
+    position: relative;
+    left: 10px;
+    bottom: 50px;
+    color: blueviolet;
+    background-color: bisque;
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid rgb(255, 123, 0);
+    border-radius: 5px;
+    content: "開滑";
+}
+
+/*滑鼠註解示範*/
+
+.DEMO {
+    position: relative;left: 50px;
+    padding: 10%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid red;
+    background-color: gray;
+}
+.DEMO:hover{ 
+    transition: 1s;
+    opacity: 0.8; /*透明度*/
+    transform: scale(1.2); /*縮放*/
+    transform: rotate(5deg); /*旋轉*/
+    border-radius:10%; /*削邊*/
+    box-shadow: 10px 10px 5px red ; /*陰影*/
+}
+/*滑鼠移上特效*/
+.box01{
+    position: relative;left: 50px;top: 50px;
+    padding: 100px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid red;
+    background-color: gray;
+}
+
+@keyframes change { 
+    10% { background-color: red;}
+    50% {background-color: aqua;}
+    100% { background-color: blueviolet;}
+    
+}
+
+.box01:hover{
+    animation-name: change;
+    animation-duration: 5s;
+    animation-timing-function: 2;
+}
+/*動畫製作*/

@@ -1,0 +1,110 @@
+// .是CLASS:()簡寫
+// 無設定的話 1rem=16px 
+EM與REM的差別
+	REM是ROOT層級也就是 html{}內所設定的font-size來做變化
+	EM則是根據父層級來做大小變化
+h-100
+
+	定寬容器	寫法
+	非100%會留邊
+		.container	    100%	540px	720px	960px	1140px	1320px
+		.container-sm	100%	540px	720px	960px	1140px	1320px
+		.container-md	100%	100%	720px	960px	1140px	1320px
+		.container-lg	100%	100%	100%	960px	1140px	1320px
+		.container-xl	100%	100%	100%	100%	1140px	1320px
+		.container-xxl	100%	100%	100%	100%	100%	1320px
+		.container-fluid(滿版) 全部100%
+	
+	排版大於小於 
+	如滿足則使用垂直排版   可同時使用創造不同螢幕不同排版
+		極小 (xs) 手機直向
+		小 (sm)	手機橫向
+		中 (md) 平板 直向
+		大 (lg) 平板 橫向
+		特大 (xl) 桌機
+		超級大 (xxl) 超大螢幕
+			xs	<576px	
+			sm	≥576px	
+			md	≥768px	
+			lg	≥992px	
+			xl	≥1200px	
+			xxl	≥1400px
+	justify-content ITEM 排版方式
+	 justify-content-start"   全部排到右邊
+	 justify-content-end"	  全部排到左邊
+	 justify-content-center"  全部排到中間
+	 justify-content-between" 兩側排到最邊 間隔平均分布
+	 justify-content-around"  兩側留一欄裡面平均分布
+	 justify-content-evenly"  全部間隔平均分布
+
+	PADDING 留白大小
+		y是只有Y軸(上下)留白而已
+		x是只有X軸(左右)留白而已
+		可以使用上述大小搭配做變化:"p-lg-5"
+		p-1 py-1 px-1
+		p-2 py-2 px-2
+		p-3 py-3 px-3
+		p-4 py-4 px-4
+		p-5 py-5 px-5
+	.mt-0 	margin-top: 0 
+	.me-1 	margin-end: ($spacer * .25)
+
+	寫在父層控制各裝置欄數 (自動控制欄寬)
+	注意數字部分是"欄數"，不是12欄去除於數字
+		row-cols-sm-2
+		row-cols-md-3
+		row-cols-lg-4
+	控制欄間距 
+	g-1 g-2 g-3 g-4 g-5
+
+	H1~H6在BOOSTRAP裡已有改變與HTML是不一樣的
+	在BOOTSTRAP是寫在CLASS裡的
+	small是副標題(較小號字體)
+		<div class="h1 text-center">標題
+			<span class="small">副標題</span></div>
+	.lead字體加大效果
+		 <span class="lead">字體加大與加粗</span>    
+		 
+	<small> </small>             使用後中間字體變小
+	<b> </b> <strong> </strong>  使用後中間字體變粗體
+	<i>< /i> <em> </em>          使用後中間字體變斜體
+	.mark與<mark></mark>         代表被標記或是重點強調的文本，以供參考或標記。
+	<s></s>                      文字畫線劃掉
+	.text-wrap                   文字自動換行
+	.text-nowrap                 文字不換行
+	.text-truncate               文字過長會省略變...
+
+	使用 class:text-primary 可以改變顏色:藍色
+		primary    藍色
+		secondary  灰色
+		success    淺綠色
+		danger     褐色
+		warning    黃色
+		info       淺藍色
+		light      亮灰色
+		dark       黑色
+		muted      淺灰色
+
+	.order-1(1~12)	欄所在位置定義
+	.order-first 	值是-1絕對在第一欄
+	.order-last		值是13絕對在最後一欄
+	.order-md-1      搭配螢幕大小在不同尺寸做排序移動
+	
+	.offset-1 往右推欄數
+
+	figure語法示範 適用在圖片需註解時
+		<figure class="figure">
+		<img src="https://picsum.photos/200" class="figure-img img-fluid rounded" alt="">
+			<figcaption class="figure-caption">A caption for the above image.</figcaption>
+		</figure>
+
+	img-fluid 使圖片最大為本身解析度
+	w-100 h-100 使圖片高寬為整個欄的大小
+	都不寫為圖片大小都不變，可能會有超出容器的情形
+
+	.card預設是.flex-direction:column  直向
+	.flex-row flex-direction:row       橫向
+
+	.d-flex			flexbox		   如果CONTAINER外的欄會是一行
+	.d-inline-flex  inline flexbox 下面CONTAINER的欄會往上補變成同一行
+	.flex-column    .flex-row	   flex橫向與直向控制

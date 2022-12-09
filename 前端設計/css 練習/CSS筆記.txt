@@ -1,0 +1,71 @@
+偽元素舉例
+
+    before          加在前面  div::before
+    after           加在後面  div::after
+    first-letter    第一個字  div:first-letter
+    first-line      第一行   div:first-line
+    selection       被滑鼠反白後的效果
+    hover           是滑鼠移上去後觸發 div:hover
+    lastchild       只改變最後一個子元素 
+
+        .item::after{
+                content: "後面加字，記得要加上雙引號("")";
+                color: blue; 
+            }
+    
+:root HTML裡的根元素 設定整個網頁的基底
+    :root {
+             background: yellow;
+             }
+
+transition-duration 動畫速度控制
+
+    div{
+        transition-duration:2s; 
+    }
+overflow語法使用
+    overflow: visible;          使文字超出內容格
+    overflow: hidden;           超出內容格文字隱藏，還是可以加滾動條
+    overflow: clip;             類似HIDDEN，無法在加滾動條
+    overflow: scroll;           加上滾動條
+    overflow: auto;             如果有超出內容格的話，會加上滾動條
+    overflow: overlay;          滾動條會加到內容格內，可能會擋到字  
+
+text-align: left; 文字對齊方式
+    left (對齊左側)
+    center (置中)
+    right (對齊右側)
+    justify (左右對齊)
+
+border 和 outline 很類似，但有如下區別：
+outline 不佔據空間，繪製於元素內容周圍。
+    outline 語法使用
+        outline: 1rem solid;       文字框自動加上框線
+        outline: red dashed;       文字框加上紅色虛線
+        outline: double thick;     文字框變成雙實線
+        outline: 8px ridge;        文字框加上脊線
+        border:none                框線取消
+
+object-fit:fill     預設值，預設會強制變形至 css 所定義的元素寬高，不管原檔比例
+object-fit:contain  增加或減少載入物件的寬度及高度(維持原比例)直到放得進所定義的元素寬高。
+object-fit:cover    填滿元素的寬度及高度(維持原比例)圖片裁剪後放入
+object-fit:none     不做任何大小及比例調整
+
+    Inline行內元素
+    ．元素可在同一行內呈現，圖片或文字均不換行，也不會影響其版面配置
+    ．不可設定長寬，元素的寬高由它的內容撐開
+
+    Block區塊元素
+    ．元素寬度預設會撐到最大，使其占滿整個容器
+    ．可以設定長寬/margin/padding，但仍會占滿一整行
+
+    inline-block行內區塊
+    ．以inline的方式呈現，但同時擁有block的屬性
+    ．可設定元素的寬高/margin/padding
+    ．可水平排列
+
+    @media 條件式
+        orientation 螢幕方向
+        max-width:  1400px 符合1400px以下
+        print       在列印時
+

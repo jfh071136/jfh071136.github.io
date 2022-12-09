@@ -1,0 +1,55 @@
+
+/*CSS註解寫法*/
+
+p{
+    color: rgb(0, 255, 0);
+    background-color: rgb(174, 43, 226);
+}
+
+.meat{
+    color: brown;
+}
+.cook{
+    color: rgb(255, 238, 0);
+}
+.background{
+    background-color: blue;
+}
+#only{
+    color: rgb(0, 255, 34);
+}
+* {
+    color: rgb(255, 140, 0);
+} 
+/*米字號套用所有未設定的*/
+
+.FLEX練習 {
+    display: flex;
+    flex-wrap: wrap; /*長度不夠自動換行，須把FLEX屬性取消*/
+    flex-direction: column;/*改成由上而下方向顯示列表*/
+    /*flex-direction: column-reverse;改成由下而上*/
+    /*flex-direction: row;由左而右 家REVERSE變由右至左*/
+    height: 500px;
+    border: 1px solid black;
+    justify-content: center; /*進行主軸置中，記得刪區塊內FLEX屬性*/
+    /*justify-content: space-around、star、end; 分別是等距對齊、由左對齊、由右對齊*/
+    align-items: center;/*次軸置中，原理同上*/
+    /*align-content: center;如有多行需使用*/
+}
+
+.FLEX練習 div{
+     border: 5px solid red; color: aqua;padding: 20px; width: 500px; margin: 1px;
+}
+
+.區塊一{
+    flex: 1;
+    order: 1;
+}
+.區塊二{
+    flex: 2;
+    order: 3;
+}
+.區塊三{
+    flex: 1;
+    order: 2;
+}

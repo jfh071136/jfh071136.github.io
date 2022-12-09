@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>JS應用練習</title>
+</head>
+
+<body>
+
+    <h2>JS變數練習</h2>
+    <p id="variable"></p>
+    <hr>
+<!-- 溫度換算 -->
+    <h2>溫度換算</h2>
+    <span>請輸入攝氏</span>
+    <input type="number" id="testinput" placeholder="攝氏">
+    <input id="submit" type="submit" value="送出">
+    <button id="reset">清除</button>
+    <br>
+    <span>華氏: <span id="ouput"></span> </span>
+    <hr>
+    <h2>簡單計時器</h2>
+    <button id="start">開始計時</button>
+    <p id=second> </p>
+    <button id="stopp">停止</button>
+    <hr>
+
+<!-- 下拉式選單 -->
+    <h2>下拉式選單</h2>
+
+    <select name="" id="dropdown">
+        <option value="none">請選擇</option>
+        <option value="pic1">照片1</option>
+        <option value="pic2">照片2</option>
+        <option value="pic3">照片3</option>
+    </select>
+    <br>
+    <div>
+        <p id="show"></p>
+        <img id="image" width="500px" height="500px" src=" " alt="">
+    </div>
+    <hr>
+
+    <div class="container mt-2">
+        <div class="row">
+            <div class="item" style="width: 200px; height: 200px; border: 1px solid brown; border-radius: 1rem;">
+                <div class="row" style="height: 75px;border: 1px solid black;
+                border-radius: 0.98rem 0.9rem 0rem 0rem; background-color: brown;">
+
+                    <div id="year" class="col-4 p-1 text-center" style=" box-sizing: border-box;">年分</div>
+                    <div id="month" class="col-8 pt-1 " style="font-size: 36px; box-sizing: border-box;">月份</div>
+                </div>
+                <div id="day" class="item text-center" style="font-size: 4rem;">日期</div>
+                <div id="week" class="item text-center">星期</div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- 密碼顯示 -->
+    <div class="container mx-3">
+        <h2>密碼輸入</h2>
+        <p class="m-0">密碼 1 <input id="cc_password" type="password"></p>
+        <input id="tt_password" class="mb-3" type="checkbox">顯示密碼1的密碼
+        <p>密碼 2 <input id="change_password" type="password">
+            <ion-icon id="toggle_password" name="eye-outline"></ion-icon>
+            <input class="btn btn-primary ms-1" type="submit" value="送出">
+
+        </p>
+
+    </div>
+
+
+    <script src="script_variable.js"></script>
+    <script src="script_cacul.js"></script>
+    <script src="script_time.js"></script>
+    <script src="script_option.js"></script>
+    <script src="script_calendar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script_password.js"></script>
+</body>
+
+</html>

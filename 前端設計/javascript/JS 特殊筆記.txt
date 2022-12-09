@@ -1,0 +1,17 @@
+閉包 closure 可以使不同的函式，使用相同變數名稱
+使用函式將函式包起來，並在外圈函式使用RETURN
+以下例子可以重複使用 count 變數名稱
+    function dogHouse() {
+    var count = 0;
+    function countDogs() {
+        count += 1;
+        console.log(count + ' dogs');
+    }
+    return countDogs;
+    }
+
+    const countDogs = dogHouse();
+    countDogs(); // "1 dogs"
+    countDogs(); // "2 dogs"
+    countDogs(); // "3 dogs"
+    
